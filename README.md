@@ -4,10 +4,36 @@ Real Minecraft Java gameplay inside classic Doom and Doom II on Windows.
 Minecraft runs alongside a patched GZDoom engine: Minecraft renders your
 hands, inventory, blocks and HUD; Doom supplies its maps, enemies and combat.
 
-This is the source snapshot of the locally tested October 10, 2026 prototype.
-It requires building the engine and Minecraft bridge. There is no packaged
-one-click download yet. You must own Minecraft Java and supply Doom/Doom II
-IWADs. No game files, worlds, account data or authentication files are included.
+This is the locally tested October 10, 2026 prototype. A Windows installer
+is available from [Releases](https://github.com/roryekay/doomcraft/releases/latest).
+You must own Minecraft Java and supply Doom/Doom II IWADs. No proprietary
+game files, worlds, account data or authentication files are included.
+
+## Install on Windows
+
+1. Install your Steam copy of Doom/Doom II. Install the official Minecraft
+   Launcher, open it and sign in, then close it.
+2. Download **DoomCraft-Setup-0.1.0-Windows-x64.exe** from Releases and open it.
+   Setup installs under your user account without administrator access and
+   creates **DoomCraft** and **DoomCraft II** desktop shortcuts.
+3. Finish with game setup enabled. Doom WADs are detected across Steam libraries;
+   use Browse if necessary. Click **Set up DoomCraft**. It downloads pinned,
+   verified Fabric libraries/API and GZDoom sound dependencies automatically.
+4. Open Minecraft Launcher, select **DoomCraft**, and click Play. The launcher
+   downloads Minecraft 26.3 and its Java runtime. Create or open a Minecraft
+   world, leave it running, and launch either desktop shortcut.
+
+Requires Windows 10/11 x64, internet for first setup, and about 8 GB RAM.
+Purchasing games and Minecraft sign-in remain your responsibility. Setup does
+not download Doom IWADs or log into your accounts. Existing profiles are retained
+and backed up locally; Minecraft controls are copied into a separate instance.
+Use **Set up DoomCraft** in the Start menu if you move the games. Worlds and
+runtime downloads are retained on uninstall; remove the DoomCraft installation
+entry in Minecraft Launcher manually if you uninstall. The prototype installer
+is unsigned. SHA256SUMS.txt accompanies release files.
+
+Developers can still build from source below. Installer details and reproducible
+packaging instructions are in [installer/README.md](installer/README.md).
 
 ## Features
 

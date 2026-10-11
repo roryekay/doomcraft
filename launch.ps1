@@ -1,4 +1,4 @@
-param([ValidateSet('Doom','DoomII')][string]$Game='Doom',[switch]$TestMap,[string]$WadPath)
+param([ValidateSet('Doom','DoomII')][string]$Game='Doom',[switch]$TestMap,[string]$WadPath,[string]$MinecraftProfileName='Minecraft x Doom')
 $ErrorActionPreference='Stop'
 trap {
     $_.Exception.Message | Set-Content -LiteralPath (Join-Path $PSScriptRoot 'local/launcher-error.txt')
@@ -22,7 +22,7 @@ if(!(Test-Path -LiteralPath $wad)) { throw 'Steam Doom download is not complete 
 if(!(Get-NetTCPConnection -State Listen -LocalPort 25601 -ErrorAction SilentlyContinue)) {
     Start-Process explorer.exe -ArgumentList 'shell:AppsFolder\Microsoft.4297127D64EC6_8wekyb3d8bbwe!Minecraft'
     Add-Type -AssemblyName System.Windows.Forms
-    [void][System.Windows.Forms.MessageBox]::Show('In Minecraft Launcher, select Minecraft x Doom and click PLAY. Leave that Minecraft window running; Doom will connect when the guest loads. Click OK to open Doom.','Minecraft x Doom',[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Information)
+    [void][System.Windows.Forms.MessageBox]::Show("In Minecraft Launcher, select $MinecraftProfileName and click PLAY. Create or open a Minecraft world and leave that window running; Doom will connect when the guest loads. Click OK to open Doom.",'DoomCraft',[System.Windows.Forms.MessageBoxButtons]::OK,[System.Windows.Forms.MessageBoxIcon]::Information)
 }
 if(!(Get-Process gzdoom -ErrorAction SilentlyContinue)) {
     $arguments=@('-iwad',('"'+$wad+'"'),'-config',('"'+(Join-Path $root "local/$Game.ini")+'"'),'-savedir',('"'+(Join-Path $root "local/saves-$Game")+'"'),'-file',('"'+(Join-Path $runtime 'doomcraft.pk3')+'"'),'-width','1280','-height','720','-window','+exec',('"'+(Join-Path $root 'doomcraft.cfg')+'"'),'+logfile',('"'+(Join-Path $root 'local/doomcraft.log')+'"'))
