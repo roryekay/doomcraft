@@ -1,0 +1,28 @@
+OptionMenu "DoomCraftDoomBosses" {
+Title "Doom boss fights"
+Command "Refill TNT + firework crossbow", "doomcraft_resupply"
+Command "E1M8 - Bruiser brother 1", "doomcraft_boss E1M8 BaronOfHell 0 2"
+Command "E1M8 - Bruiser brother 2", "doomcraft_boss E1M8 BaronOfHell 1 2"
+Command "E2M8 - Cyberdemon 1", "doomcraft_boss E2M8 Cyberdemon 0 2"
+Command "E3M8 - Spider mastermind 1", "doomcraft_boss E3M8 SpiderMastermind 0 2"
+Command "E3M9 - Cyberdemon 1", "doomcraft_boss E3M9 Cyberdemon 0 2"
+Command "E4M2 - Cyberdemon 1", "doomcraft_boss E4M2 Cyberdemon 0 2"
+Command "E4M6 - Cyberdemon 1", "doomcraft_boss E4M6 Cyberdemon 0 2"
+Command "E4M7 - Cyberdemon 1 (hard)", "doomcraft_boss E4M7 Cyberdemon 0 3"
+Command "E4M8 - Spider mastermind 1", "doomcraft_boss E4M8 SpiderMastermind 0 2"
+}
+OptionMenu "DoomCraftDoomIIBosses" {
+Title "Doom II boss fights"
+Command "Refill TNT + firework crossbow", "doomcraft_resupply"
+Command "MAP06 - Spider mastermind 1 (hard)", "doomcraft_boss MAP06 SpiderMastermind 0 3"
+Command "MAP08 - Cyberdemon 1", "doomcraft_boss MAP08 Cyberdemon 0 2"
+Command "MAP10 - Cyberdemon 1", "doomcraft_boss MAP10 Cyberdemon 0 2"
+Command "MAP20 - Cyberdemon 1", "doomcraft_boss MAP20 Cyberdemon 0 2"
+Command "MAP20 - Spider mastermind 1", "doomcraft_boss MAP20 SpiderMastermind 0 2"
+Command "MAP23 - Spider mastermind 1", "doomcraft_boss MAP23 SpiderMastermind 0 2"
+Command "MAP28 - Spider mastermind 1", "doomcraft_boss MAP28 SpiderMastermind 0 2"
+Command "MAP28 - Spider mastermind 2", "doomcraft_boss MAP28 SpiderMastermind 1 2"
+Command "MAP29 - Cyberdemon 1", "doomcraft_boss MAP29 Cyberdemon 0 2"
+Command "MAP30 - Icon of Sin 1", "doomcraft_boss MAP30 BossBrain 0 2"
+Command "MAP32 - Cyberdemon 1", "doomcraft_boss MAP32 Cyberdemon 0 2"
+}

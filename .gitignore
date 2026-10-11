@@ -1,0 +1,14 @@
+local/
+minecraft-instance/
+mc/.gradle/
+mc/build/
+__pycache__/
+*.log
+*.wad
+*.WAD
+*.lmp
+*.lnk
+*.jks
+*.p12
+launcher_profiles*.json
+launcher_accounts*.json

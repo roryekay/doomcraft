@@ -1,0 +1,7 @@
+{
+	"required": true,
+	"package": "dev.rehan.passthrough.mixin",
+	"compatibilityLevel": "JAVA_25",
+	"mixins": ["AbstractArrowAccessor", "EatMixin", "EntityRainMixin", "AbstractArrowMixin", "BarrierBlockMixin", "BlockStateBaseMixin", "CommandsMixin", "FireworkRocketEntityMixin", "ItemImpulseMixin", "ItemMixin", "LevelMixin", "MobAccessor", "MobMixin", "PlayerMixin", "PortalMixin", "ProjectileInvoker", "ProjectileMixin", "ProxyMixin", "ServerExplosionMixin", "ServerPlayerMixin"],
+	"injectors": { "defaultRequire": 1 }
+}

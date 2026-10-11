@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "package": "dev.rehan.passthrough.client.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "AbstractClientPlayerMixin",
+    "AvatarRendererMixin",
+    "CameraMixin",
+    "ClientLevelMixin",
+    "EntityPickMixin",
+    "HudMixin",
+    "LivingEntityMixin",
+    "FogRendererMixin",
+    "FramerateLimitTrackerMixin",
+    "GameRendererMixin",
+    "GlCommandEncoderMixin",
+    "KeyMappingAccessor",
+    "LocalPlayerMixin",
+    "PlayerModelMixin",
+    "ToastManagerMixin",
+    "ScreenEffectRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

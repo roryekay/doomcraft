@@ -1,0 +1,58 @@
+actor DoomCraftBlock
+{
+    Radius 16
+    Height 32
+    +SOLID
+    +NOGRAVITY
+    +DONTTHRUST
+    +NOBLOOD
+    RenderStyle None
+    States
+    {
+    Spawn:
+        TNT1 A -1
+        Stop
+    }
+}
+actor DoomCraftBlast
+{
+    +NOGRAVITY
+    +NOINTERACTION
+    RenderStyle None
+    States
+    {
+    Spawn:
+        TNT1 A -1
+        Stop
+    }
+}
+actor DoomCraftTNTExplosion : Rocket
+{
+    +NOGRAVITY
+    +NOINTERACTION
+    -ROCKETTRAIL
+    States
+    {
+    Death:
+        MISL B 0 Bright A_PlaySound("weapons/rocklx", CHAN_BODY)
+        MISL B 8 Bright A_Explode(256, 192, 1)
+        MISL C 6 Bright
+        MISL D 4 Bright
+        Stop
+    }
+}
+actor DoomCraftFireworkExplosion : Rocket
+{
+    +NOGRAVITY
+    +NOINTERACTION
+    -ROCKETTRAIL
+    States
+    {
+    Death:
+        MISL B 0 Bright A_PlaySound("weapons/rocklx", CHAN_BODY)
+        MISL B 8 Bright A_Explode(128, 128, 1)
+        MISL C 6 Bright
+        MISL D 4 Bright
+        Stop
+    }
+}

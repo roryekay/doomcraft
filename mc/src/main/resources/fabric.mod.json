@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "passthrough",
+  "version": "${version}",
+  "name": "DoomCraft Minecraft Bridge",
+  "description": "Isolated real Minecraft guest for the DoomCraft engine adapter.",
+  "authors": [
+    "rehan"
+  ],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.rehan.passthrough.Passthrough"
+    ],
+    "client": [
+      "dev.rehan.passthrough.client.PassthroughClient"
+    ]
+  },
+  "mixins": [
+    "passthrough.mixins.json",
+    {
+      "config": "passthrough.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.5",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
